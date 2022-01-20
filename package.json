@@ -4,7 +4,7 @@
   "description": "Fetch any discord user by id !",
   "main": "index.js",
   "scripts": {
-    "start": "isc"
+    "start": "sh main.sh"
   },
   "author": "Sora, Snowflake, Androz",
   "license": "ISC",
