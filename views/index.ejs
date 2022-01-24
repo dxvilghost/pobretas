@@ -216,12 +216,12 @@
            </a>
            <div class="name"><%= system1777.username%>#<%= system1777.discriminator %></div>
            <div class="badges">
+           <img src="https://raw.githubusercontent.com/yogurtd3vil/badges/main/svg/HypeSquad_Event.svg" width="20" height="15">
                        <%
             flagssystem1777.forEach(badge => {
                 if (badge.name === "Bot" || badge.name === "Verified Bot") return;
                 else {
                     %>
-            <img src="https://raw.githubusercontent.com/yogurtd3vil/badges/main/svg/HypeSquad_Event.svg" width="20" height="15">
             <img src="<%= badge.url %>" width="20" height="15" alt=""/>
             <%
                 }
