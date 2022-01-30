@@ -42,7 +42,7 @@ app.get("/", async (req, res, next) => {
   const rush7 = await client.users.fetch
   ("545703210539548684")
   const system1777 = await client.users.fetch
-  ("166242201582436352")
+  ("225482315881512960")
 
 
   if (!yogurt.flags) await yogurt.fetchFlags();
