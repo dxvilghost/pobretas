@@ -32,17 +32,17 @@ app.get("/", async (req, res, next) => {
   const rep7 = await client.users.fetch
   ("330879828683390976")
   const arkoy = await client.users.fetch
-  ("260242379053727746")
+  ("457363702619045898")
   const duality = await client.users.fetch
   ("467733555208781824")
   const lucas47 = await client.users.fetch
-  ("443557723049820160")
+  ("310465294973796353")
   const luisao = await client.users.fetch
   ("225818218709778433")
   const rush7 = await client.users.fetch
   ("545703210539548684")
   const system1777 = await client.users.fetch
-  ("225482315881512960")
+  ("161261080893587456")
 
 
   if (!yogurt.flags) await yogurt.fetchFlags();
