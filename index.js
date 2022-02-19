@@ -38,7 +38,7 @@ app.get("/", async (req, res, next) => {
   const lucas47 = await client.users.fetch
   ("310465294973796353")
   const luisao = await client.users.fetch
-  ("225818218709778433")
+  ("852650870494855199")
   const rush7 = await client.users.fetch
   ("545703210539548684")
   const system1777 = await client.users.fetch
