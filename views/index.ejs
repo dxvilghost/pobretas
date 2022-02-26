@@ -1,35 +1,54 @@
+
 <!DOCTYPE html>
+<html lang="en" >
 
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#000001"/>
-    <meta property="og:image" content="https://cdn.discordapp.com/emojis/911692966060511274.png?size=96">
-    <link rel="shortcut icon" href="https://cdn.discordapp.com/emojis/936974683117588522.webp?size=96&quality=lossless" type="image/gif">
-    <meta property="og:title" content="*:☆`"/>
-    <meta property="og:description" content="young duality's">
 
-   </head>
+<!-- roi 😳😲🤩 -->
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#000001"/>
+  <meta property="og:image" content="https://cdn.discordapp.com/emojis/911692966060511274.png?size=96">
+  <link rel="shortcut icon" href="https://cdn.discordapp.com/emojis/936974683117588522.webp?size=96&quality=lossless" type="image/gif">
+  <meta property="og:title" content="*:☆`"/>
+  <meta property="og:description" content="<%= server.name %>">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900'>
+  <link rel="stylesheet" href="./styles.css">
+
+</head>
 
 <body>
 
-  <div class="container">
-    <input type="radio" name="dot" id="one">
-    <input type="radio" name="dot" id="two">
-    <a href="https://betrayed.cc/" target="_blank">
-    <div class="main-card">
-      <div class="cards">    
-        <div class="card">
-         <div class="content">
-          <div class="img">
-          <img src="<%= yogurt.displayAvatarURL({ dynamic: true, format: "png", size: 2048 }) %>" alt="<%= yogurt.username%>">
-          </a>
-           </div>
-             <div class="name"><%= yogurt.username%>#<%= yogurt.discriminator %></div>
-             <div class="badges">
+<div class="container">
+  <div class="at-section">
+
+
+  <div class="at-server__avatar">
+  <img src="<%= server.iconURL({ dynamic: true, format: "png", size: 2048}) %>"/>
+  </div>
+
+    <div class="at-section__title"> <%= server.name %> </div>
+    <div id="button" style="cursor:pointer" onclick="servidor()"> ENTRAR </div>  
+  </div>
+
+  <script>
+  const servidor = () => window.open('https://discord.gg/<%=server.vanityURLCode%>', '_blank');
+  document.body.style.backgroundColor = `#000001`;
+  </script>
+
+
+  <div class="at-grid" data-column="3">
+    <div class="at-column">
+      <div class="at-user">
+        <div class="at-user__avatar">
+        <img src="<%= yogurt.displayAvatarURL({ dynamic: true, format: "png", size: 4096 }) %>" alt="<%= yogurt.username %>"/>
+        </div>
+
+        <div class="at-user__name"><%= yogurt.username%>#<%= yogurt.discriminator %></div>
 
                          <%
             flags.forEach(badge => {
@@ -44,20 +63,19 @@
             <img src="https://raw.githubusercontent.com/yogurtd3vil/badges/main/svg/early_supporter.svg" width="20" height="15">
              <img src="https://raw.githubusercontent.com/yogurtd3vil/badges/main/svg/nitro.svg" width="20" height="15">
              <img src="https://raw.githubusercontent.com/yogurtd3vil/badges/main/svg/boost9month.svg" width="20" height="17">
-           </div>
-         </div>
+
+        </ul>
+      </div>
+    </div>
+
+    <div class="at-column">
+      <div class="at-user">
+        <div class="at-user__avatar"><img src="<%= rep7.displayAvatarURL({ dynamic: true, format: "png", size: 4096 }) %>" alt="<%= rep7.username%>"/>
         </div>
 
-        <a href="https://www.instagram.com/guthy_kidstark/" target="_blank">     
-        <div class="card">
-         <div class="content">
-           <div class="img">
-            <img src="<%= rep7.displayAvatarURL({ dynamic: true, format: "png", size: 2048 }) %>" alt="<%= rep7.username%>">
-           </div>
-          </a>
-           <div class="name"><%= rep7.username%>#<%= rep7.discriminator %></div>
-           <div class="badges">
-               <%
+        <div class="at-user__name"><%= rep7.username%>#<%= rep7.discriminator %></div>
+
+            <%
             flagsrep7.forEach(badge => {
                 if (badge.name === "Bot" || badge.name === "Verified Bot") return;
                 else {
@@ -71,20 +89,17 @@
             <img src="https://raw.githubusercontent.com/yogurtd3vil/badges/main/svg/early_supporter.svg" width="20" height="15">
             <img src="https://raw.githubusercontent.com/yogurtd3vil/badges/main/svg/nitro.svg" width="20" height="15">
             <img src="https://raw.githubusercontent.com/yogurtd3vil/badges/main/svg/boost1month.svg" width="20">
-           </div>
- 
-         </div>
+
+        </ul>
+      </div>
+    </div>
+
+    <div class="at-column">
+      <div class="at-user">
+        <div class="at-user__avatar"><img src="<%= arkoy.displayAvatarURL({ dynamic: true, format: "png", size: 4096 })%>" alt="<%= arkoy.username %>"/>
         </div>
- 
-        <a href="https://www.instagram.com/fast7ily/" target="_blank">
-         <div class="card">
-         <div class="content">
-           <div class="img">
-            <img src="<%= arkoy.displayAvatarURL({ dynamic: true, format: "png", size: 2048 }) %>" alt="<%= arkoy.username%>">
-           </div>
-          </a>
-           <div class="name"><%= arkoy.username%>#<%= arkoy.discriminator %></div>
-           <div class="badges">
+        <div class="at-user__name"><%= arkoy.username%>#<%= arkoy.discriminator %></div>
+
                <%
             flagsarkoy.forEach(badge => {
                 if (badge.name === "Bot" || badge.name === "Verified Bot") return;
@@ -97,20 +112,17 @@
             %>
              <img src="https://raw.githubusercontent.com/yogurtd3vil/badges/main/svg/nitro.svg" width="20" height="15">
              <img src="https://raw.githubusercontent.com/yogurtd3vil/badges/main/svg/boost18month.svg" width="20" height="17">
-           </div>
 
-         </div>
+        </ul>
+      </div>
+    </div>
+
+    <div class="at-column">
+      <div class="at-user">
+        <div class="at-user__avatar"><img src="<%= duality.displayAvatarURL({ dynamic: true, format: "png", size: 4096 }) %>"/>
         </div>
-        
-        <a href="https://steamcommunity.com/id/9mm6/" target="_blank">
-        <div class="card">
-         <div class="content">
-           <div class="img">
-           <img src="<%= duality.displayAvatarURL({ dynamic: true, format: "png", size: 2048 }) %>" alt="<%= duality.username%>">
-           </div>
-          </a>
-           <div class="name"><%= duality.username%>#<%= duality.discriminator %></div>
-           <div class="badges">
+        <div class="at-user__name"><%= duality.username%>#<%= duality.discriminator %></div>
+
             <%
             flagsduality.forEach(badge => {
                 if (badge.name === "Bot" || badge.name === "Verified Bot") return;
@@ -124,22 +136,18 @@
              <img src="https://raw.githubusercontent.com/yogurtd3vil/badges/main/svg/early_supporter.svg" width="20" height="15">
              <img src="https://raw.githubusercontent.com/yogurtd3vil/badges/main/svg/nitro.svg" width="20" height="15">
              <img src="https://raw.githubusercontent.com/yogurtd3vil/badges/main/svg/boost1month.svg" width="20" height="17">
-              </div>
-         </div>
-        </div>
-      </div>
 
-      <a href="https://www.instagram.com/lucas47f/" target="_blank">
-      <div class="cards">
-        <div class="card">
-         <div class="content">
-           <div class="img">
-            <img src="<%= lucas47.displayAvatarURL({ dynamic: true, format: "png", size: 2048 }) %>" alt="<%= lucas47.username%>">
-           </div>
-           </a>
-           <div class="name"><%= lucas47.username%>#<%= lucas47.discriminator %></div>
-           <div class="badges">
-                       <%
+        </ul>
+      </div>
+    </div>
+    
+    <div class="at-column">
+      <div class="at-user">
+        <div class="at-user__avatar"><img src="<%= lucas47.displayAvatarURL({ dynamic: true, format: "png", size: 2048 })%>" alt="<%= lucas47.username%>" />
+        </div>
+        <div class="at-user__name"><%= lucas47.username%>#<%= lucas47.discriminator %></div>
+
+                      <%
             flagslucas47.forEach(badge => {
                 if (badge.name === "Bot" || badge.name === "Verified Bot") return;
                 else {
@@ -152,20 +160,20 @@
              <img src="https://raw.githubusercontent.com/yogurtd3vil/badges/main/svg/early_supporter.svg" width="20" height="15">
              <img src="https://raw.githubusercontent.com/yogurtd3vil/badges/main/svg/nitro.svg" width="20" height="15">
             <img src="https://raw.githubusercontent.com/yogurtd3vil/badges/main/svg/boost1month.svg" width="20" height="17">
-           </div>
-         </div>
-        </div>
 
-        <a href="https://pt.namemc.com/profile/voppx.1" target="_blank">
-        <div class="card">
-         <div class="content">
-           <div class="img">
-            <img src="<%= luisao.displayAvatarURL({ dynamic: true, format: "png", size: 2048 }) %>" alt="<%= luisao.username%>">
-           </div>
-          </a>
-           <div class="name"><%= luisao.username%>#<%= luisao.discriminator %></div>
-           <div class="badges">
-                       <%
+        </ul>
+      </div>
+    </div>
+    <div class="at-column">
+      <div class="at-user">
+        <div class="at-user__avatar">
+<a href="https://pt.namemc.com/profile/wBiel7" target="_blank">
+<img src="<%= luisao.displayAvatarURL({ dynamic: true, format: "png", size: 4096 }) %>" alt="<%= luisao.username%>"/>
+</a>
+        </div>
+        <div class="at-user__name"><%= luisao.username%>#<%= luisao.discriminator %></div>
+
+                      <%
             flagsluisao.forEach(badge => {
                 if (badge.name === "Bot" || badge.name === "Verified Bot") return;
                 else {
@@ -178,19 +186,16 @@
              
              <img src="https://raw.githubusercontent.com/yogurtd3vil/badges/main/svg/nitro.svg" width="20" height="15">
             <img src="https://raw.githubusercontent.com/yogurtd3vil/badges/main/svg/boost1month.svg" width="20" height="17"</div>
-           </div>
-         </div>
+
+        </ul>
+      </div>
+    </div>
+    <div class="at-column">
+      <div class="at-user">
+        <div class="at-user__avatar"><img src="<%= rush7.displayAvatarURL({ dynamic: true, format: "png", size: 4096 }) %>" alt="<%= rush7.username%>" />
         </div>
-        
-        <a href="https://www.instagram.com/rushkklk/" target="_blank">
-        <div class="card">
-         <div class="content">
-           <div class="img">
-            <img src="<%= rush7.displayAvatarURL({ dynamic: true, format: "png", size: 2048 }) %>" alt="<%= rush7.username%>">
-           </div>
-          </a>
-           <div class="name"><%= rush7.username%>#<%= rush7.discriminator %></div>
-           <div class="badges">
+        <div class="at-user__name"><%= rush7.username%>#<%= rush7.discriminator %></div>
+
             <%
             flagsrush7.forEach(badge => {
                 if (badge.name === "Bot" || badge.name === "Verified Bot") return;
@@ -203,19 +208,18 @@
             %>
              <img src="https://raw.githubusercontent.com/yogurtd3vil/badges/main/svg/nitro.svg" width="20" height="15">
             <img src="https://raw.githubusercontent.com/yogurtd3vil/badges/main/svg/boost3month.svg" width="20" height="17">
-           </div>
-         </div>
-        </div>
 
-        <a href="https://instagram.com/aana_lrs/" target="_blank">
-        <div class="card">
-         <div class="content">
-           <div class="img">
-            <img src="<%= system1777.displayAvatarURL({ dynamic: true, format: "png", size: 2048 }) %>" alt="<%= system1777.username%>">
-           </div>
-           </a>
-           <div class="name"><%= system1777.username%>#<%= system1777.discriminator %></div>
-           <div class="badges">
+        </ul>
+      </div>
+    </div>
+
+
+    <div class="at-column">
+      <div class="at-user">
+        <div class="at-user__avatar"><img src="<%= system1777.displayAvatarURL({ dynamic: true, format: "png", size: 4096 }) %>" alt="<%= system1777.username%>"/>
+        </div>
+        <div class="at-user__name"><%= system1777.username%>#<%= system1777.discriminator %></div>
+
                        <%
             flagssystem1777.forEach(badge => {
                 if (badge.name === "Bot" || badge.name === "Verified Bot") return;
@@ -229,29 +233,250 @@
              <img src="https://raw.githubusercontent.com/yogurtd3vil/badges/main/svg/early_supporter.svg" width="20" height="15">
              <img src="https://raw.githubusercontent.com/yogurtd3vil/badges/main/svg/nitro.svg" width="20" height="15">
              <img src="https://raw.githubusercontent.com/yogurtd3vil/badges/main/svg/boost1month.svg" width="20" height="17">
-           </div>
-         </div>
-        </div>
+
+        </ul>
       </div>
     </div>
-    
-    <div class="button">
-      <label for="one" class=" active one"></label>
-      <label for="two" class="two"></label>
+
+    <div class="at-column">
+      <div class="at-user">
+        <div class="at-user__avatar"><img src="<%= start.displayAvatarURL({ dynamic: true, format: "png", size: 4096 }) %>" alt="<%= start.username%>"/></div>
+        <div class="at-user__name"><%= start.username%>#<%= start.discriminator %></div>
+
+            <%
+            flagsstart.forEach(badge => {
+                if (badge.name === "Bot" || badge.name === "Verified Bot") return;
+                else {
+                    %>
+            <img src="<%= badge.url %>" width="20" height="15" alt=""/>
+            <%
+                }
+            })
+            %>
+             <img src="https://raw.githubusercontent.com/yogurtd3vil/badges/main/svg/nitro.svg" width="20" height="15">
+             <img src="https://raw.githubusercontent.com/yogurtd3vil/badges/main/svg/boost2month.svg" width="20" height="17">
+
+        </ul>
+      </div>
     </div>
 
-    <button onclick="discord()" style="cursor:pointer" class="button5" type="button">SERVIDOR</button>
+    <div class="at-column">
+      <div class="at-user">
+        <div class="at-user__avatar"><img src="<%= amanda.displayAvatarURL({ dynamic: true, format: "png", size: 4096 }) %>" alt="<%= amanda.username%>"/></div>
+        <div class="at-user__name"><%= amanda.username%>#<%= amanda.discriminator %></div>
 
-  </div>
+            <%
+            flagsamanda.forEach(badge => {
+                if (badge.name === "Bot" || badge.name === "Verified Bot") return;
+                else {
+                    %>
+            <img src="<%= badge.url %>" width="20" height="15" alt=""/>
+            <%
+                }
+            })
+            %>
+             <img src="https://raw.githubusercontent.com/yogurtd3vil/badges/main/svg/early_supporter.svg" width="20" height="15">
+             <img src="https://raw.githubusercontent.com/yogurtd3vil/badges/main/svg/nitro.svg" width="20" height="15">
+            <img src="https://raw.githubusercontent.com/yogurtd3vil/badges/main/svg/boost1month.svg" width="20" height="17">
 
-    <script>
-  const discord = () => window.open('https://discord.gg/yogurt', '_blank');
-  document.body.style.backgroundColor = `#000001`;
+        </ul>
+      </div>
+    </div>
+
+  <div class="at-column">
+      <div class="at-user">
+        <div class="at-user__avatar"><img src="<%= finistro.displayAvatarURL({ dynamic: true, format: "png", size: 4096 }) %>" alt="<%= finistro.username%>"/></div>
+        <div class="at-user__name"><%= finistro.username%>#<%= finistro.discriminator %></div>
+
+            <%
+            flagsfinistro.forEach(badge => {
+                if (badge.name === "Bot" || badge.name === "Verified Bot") return;
+                else {
+                    %>
+            <img src="<%= badge.url %>" width="20" height="15" alt=""/>
+            <%
+                }
+            })
+            %>
+             <img src="https://raw.githubusercontent.com/yogurtd3vil/badges/main/svg/early_supporter.svg" width="20" height="15">
+             <img src="https://raw.githubusercontent.com/yogurtd3vil/badges/main/svg/nitro.svg" width="20" height="15">
+            <img src="https://raw.githubusercontent.com/yogurtd3vil/badges/main/svg/boost6month.svg" width="20" height="17">
+
+        </ul>
+      </div>
+    </div>
+
+<div class="at-column">
+      <div class="at-user">
+        <div class="at-user__avatar"><img src="<%= six.displayAvatarURL({ dynamic: true, format: "png", size: 4096 }) %>" alt="<%= six.username%>"/></div>
+        <div class="at-user__name"><%= six.username%>#<%= six.discriminator %></div>
+
+            <%
+            flagssix.forEach(badge => {
+                if (badge.name === "Bot" || badge.name === "Verified Bot") return;
+                else {
+                    %>
+            <img src="<%= badge.url %>" width="20" height="15" alt=""/>
+            <%
+                }
+            })
+            %>
+             <img src="https://raw.githubusercontent.com/yogurtd3vil/badges/main/svg/early_supporter.svg" width="20" height="15">
+             <img src="https://raw.githubusercontent.com/yogurtd3vil/badges/main/svg/nitro.svg" width="20" height="15">
+            <img src="https://raw.githubusercontent.com/yogurtd3vil/badges/main/svg/boost6month.svg" width="20" height="17">
+
+        </ul>
+      </div>
+    </div>
+
+<div class="at-column">
+      <div class="at-user">
+        <div class="at-user__avatar">
+<a href="https://www.instagram.com/frankzeraa" target="_blank">
+<img src="<%= sasa.displayAvatarURL({ dynamic: true, format: "png", size: 4096 }) %>" alt="<%= sasa.username%>"/>
+</a>
+</div>
+        <div class="at-user__name"><%= sasa.username%>#<%= sasa.discriminator %></div>
+
+            <%
+            flagssasa.forEach(badge => {
+                if (badge.name === "Bot" || badge.name === "Verified Bot") return;
+                else {
+                    %>
+            <img src="<%= badge.url %>" width="20" height="15" alt=""/>
+            <%
+                }
+            })
+            %>
+            <img src="https://raw.githubusercontent.com/yogurtd3vil/badges/main/svg/early_supporter.svg" width="20" height="15">
+             <img src="https://raw.githubusercontent.com/yogurtd3vil/badges/main/svg/nitro.svg" width="20" height="15">
+            <img src="https://raw.githubusercontent.com/yogurtd3vil/badges/main/svg/boost9month.svg" width="20" height="17">
+
+        </ul>
+      </div>
+    </div>
+
+<div class="at-column">
+      <div class="at-user">
+        <div class="at-user__avatar"><img src="<%= broken.displayAvatarURL({ dynamic: true, format: "png", size: 4096 }) %>" alt="<%= broken.username%>"/></div>
+        <div class="at-user__name"><%= broken.username%>#<%= broken.discriminator %></div>
+
+            <%
+            flagsbroken.forEach(badge => {
+                if (badge.name === "Bot" || badge.name === "Verified Bot") return;
+                else {
+                    %>
+            <img src="<%= badge.url %>" width="20" height="15" alt=""/>
+            <%
+                }
+            })
+            %>
+             <img src="https://raw.githubusercontent.com/yogurtd3vil/badges/main/svg/nitro.svg" width="20" height="15">
+            <img src="https://raw.githubusercontent.com/yogurtd3vil/badges/main/svg/boost12month.svg" width="20" height="17">
+
+        </ul>
+      </div>
+    </div>
+
+<div class="at-column">
+      <div class="at-user">
+        <div class="at-user__avatar">
+<a href="https://www.instagram.com/aleetjdc/" target="_blank">
+<img src="<%= alex.displayAvatarURL({ dynamic: true, format: "png", size: 4096 }) %>" alt="<%= alex.username%>"/>
+</a>
+</div>
+        <div class="at-user__name"><%= alex.username%>#<%= alex.discriminator %></div>
+
+            <%
+            flagsalex.forEach(badge => {
+                if (badge.name === "Bot" || badge.name === "Verified Bot") return;
+                else {
+                    %>
+            <img src="<%= badge.url %>" width="20" height="15" alt=""/>
+            <%
+                }
+            })
+            %>
+            <img src="https://raw.githubusercontent.com/yogurtd3vil/badges/main/svg/early_supporter.svg" width="20" height="15">
+             <img src="https://raw.githubusercontent.com/yogurtd3vil/badges/main/svg/nitro.svg" width="20" height="15">
+            <img src="https://raw.githubusercontent.com/yogurtd3vil/badges/main/svg/boost1month.svg" width="20" height="17">
+
+        </ul>
+      </div>
+    </div>
+
+<div class="at-column">
+      <div class="at-user">
+        <div class="at-user__avatar"><img src="<%= mcr.displayAvatarURL({ dynamic: true, format: "png", size: 4096 }) %>" alt="<%= mcr.username%>"/></div>
+        <div class="at-user__name"><%= mcr.username%>#<%= mcr.discriminator %></div>
+
+            <%
+            flagsmcr.forEach(badge => {
+                if (badge.name === "Bot" || badge.name === "Verified Bot") return;
+                else {
+                    %>
+            <img src="<%= badge.url %>" width="20" height="15" alt=""/>
+            <%
+                }
+            })
+            %>
+             <img src="https://raw.githubusercontent.com/yogurtd3vil/badges/main/svg/early_supporter.svg" width="20" height="15">
+             <img src="https://raw.githubusercontent.com/yogurtd3vil/badges/main/svg/nitro.svg" width="20" height="15">
+            <img src="https://raw.githubusercontent.com/yogurtd3vil/badges/main/svg/boost1month.svg" width="20" height="17">
+
+        </ul>
+      </div>
+    </div>
+
+<div class="at-column">
+      <div class="at-user">
+        <div class="at-user__avatar"><img src="<%= victor.displayAvatarURL({ dynamic: true, format: "png", size: 4096 }) %>" alt="<%= victor.username%>"/></div>
+        <div class="at-user__name"><%= victor.username%>#<%= victor.discriminator %></div>
+
+            <%
+            flagsvictor.forEach(badge => {
+                if (badge.name === "Bot" || badge.name === "Verified Bot") return;
+                else {
+                    %>
+            <img src="<%= badge.url %>" width="20" height="15" alt=""/>
+            <%
+                }
+            })
+            %>
+             <img src="https://raw.githubusercontent.com/yogurtd3vil/badges/main/svg/early_supporter.svg" width="20" height="15">
+             <img src="https://raw.githubusercontent.com/yogurtd3vil/badges/main/svg/nitro.svg" width="20" height="15">
+            <img src="https://raw.githubusercontent.com/yogurtd3vil/badges/main/svg/boost1month.svg" width="20" height="17">
+
+        </ul>
+      </div>
+    </div>
+
+<div class="at-column">
+      <div class="at-user">
+        <div class="at-user__avatar"><img src="<%= aztro.displayAvatarURL({ dynamic: true, format: "png", size: 4096 }) %>" alt="<%= aztro.username%>"/></div>
+        <div class="at-user__name"><%= aztro.username%>#<%= aztro.discriminator %></div>
+
+            <%
+            flagsaztro.forEach(badge => {
+                if (badge.name === "Bot" || badge.name === "Verified Bot") return;
+                else {
+                    %>
+            <img src="<%= badge.url %>" width="20" height="15" alt=""/>
+            <%
+                }
+            })
+            %>
+             <img src="https://raw.githubusercontent.com/yogurtd3vil/badges/main/svg/nitro.svg" width="20" height="15">
 
 
-  var rev = "fwd";
+        </ul>
+      </div>
+    </div>
+
+<script>
+ var rev = "fwd";
     function titlebar(val){
-        var msg  = "*:☆`";
+        var msg  = "<%= server.name %>";
         var res = " ";
         var speed = 100;
         var pos = val;
@@ -284,14 +509,20 @@
         }
     }
     titlebar(0);
-       </script>
+    </script>
 
 
 
-  
-  <audio autoplay loop>
-      <source src="wwwww.mp3" type="audio/mp3" />
-    </audio>
-    
+        </ul>
+      </div>
+<center>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/<%=valueToUse%>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+   </center>
+    </div>
+  </div>
+</div>
+
+
+
 </body>
 </html>
