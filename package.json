@@ -6,7 +6,7 @@
   "scripts": {
     "start": "sh main.sh"
   },
-  "author": "Sora, Snowflake, Androz",
+  "author": "yogurtd3vil", //fofo
   "license": "ISC",
   "dependencies": {
     "child_process": "^1.0.2",
